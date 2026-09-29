@@ -1,7 +1,7 @@
 Affiliation logo sources
 
 Logos identify the authors' affiliations. Trademarks belong to their respective owners.
-Official artwork is scaled proportionally. Sony and Amazon use dark wordmarks for a white background. The 2077AI wordmark uses its official blue on white.
+Official artwork is scaled proportionally. Sony and Amazon use dark wordmarks for a white background. The Abaka AI SVG is unmodified; CSS displays its monochrome wordmark in black on white.
 
 cmu: https://www.cmu.edu/
 Official homepage inline SVG
@@ -10,9 +10,6 @@ nvidia: https://www.nvidia.com/
 Official homepage inline SVG
 
 liverpool: https://www.liverpool.ac.uk/
-Official homepage inline SVG
-
-wisconsin: https://www.wisc.edu/
 Official homepage inline SVG
 
 amazon: https://www.aboutamazon.com/
@@ -36,8 +33,8 @@ Official logo asset
 microsoft: https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png
 Official logo asset
 
-2077ai: https://www.2077ai.com/_next/static/media/text_logo.08xpdgp22uc7w.svg
-Official logo asset
+abaka: https://www.abaka.ai/_next/static/media/text_logo.0_19fw7fb_ro5.svg
+Official homepage logo asset: https://www.abaka.ai/
 
 meta: https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg
 Official logo asset

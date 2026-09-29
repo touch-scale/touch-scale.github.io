@@ -129,9 +129,23 @@ dialog::backdrop{background:#0009}
 .resource-name{font-size:1em;line-height:1.5}
 .resource-status{font-size:.75em;line-height:1.5;color:#8a8a8a}
 .author-list,.affiliation-list{display:flex;flex-wrap:wrap;justify-content:center;list-style:none;padding:0}
-.author-list{column-gap:1.2em;row-gap:.5em;margin:0 0 1.5em;color:var(--accent);font-size:1em;line-height:1.65}
+.author-list{column-gap:1.15em;row-gap:.2em;margin:0 0 .85em;color:var(--accent);font-size:1em;line-height:1.65}
 .author-list li,.affiliation-list li{white-space:nowrap}
 .author-list sup,.affiliation-list sup,.contribution-note sup{position:relative;top:-.45em;vertical-align:baseline;font-size:.65em;line-height:0}
 .author-list sup{margin-left:.13em}
-.affiliation-list{gap:.4em 1.2em;margin:0 0 1em;font-size:.875em;line-height:1.65;color:#787878}
+.affiliation-list{gap:.2em 1.1em;margin:0 0 .65em;font-size:.8em;line-height:1.65;color:#787878}
 .contribution-note{display:flex;justify-content:center;gap:1.5em;margin:0;font-size:.8em;line-height:1.5;color:#787878}
+
+/* Author credits follow the title; compact logo rows keep the hero close by. */
+.project-header{margin-bottom:2em}
+.project-header h2{margin-bottom:.65em}
+.project-team{text-align:center}
+.affiliation-logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.9em 1.15em;list-style:none;margin:1.25em auto 0;padding:0}
+.affiliation-logos li{display:flex;align-items:center;justify-content:center;width:7.3em;height:2.2em;padding:0}
+.affiliation-logos img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+.affiliation-logos .logo-deepmind img{width:100%}
+.affiliation-logos .logo-meta img{width:6em}
+.affiliation-logos .logo-yale img{max-height:1.85em}
+.affiliation-logos .logo-tamu img,.affiliation-logos .logo-washington img{height:100%}
+.affiliation-logos .logo-2077ai img{width:4.4em}
+.affiliation-logos .logo-berkeley img{width:100%;max-height:none}

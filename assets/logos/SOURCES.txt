@@ -1,7 +1,7 @@
 Affiliation logo sources
 
 Logos identify the authors' affiliations. Trademarks belong to their respective owners.
-Official artwork is scaled proportionally. Sony and Amazon use dark wordmarks for a white background. The Abaka AI SVG is unmodified; CSS displays its monochrome wordmark in black on white.
+Official artwork is scaled proportionally. Sony and Amazon use dark wordmarks for a white background.
 
 cmu: https://www.cmu.edu/
 Official homepage inline SVG
@@ -33,8 +33,8 @@ Official logo asset
 microsoft: https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png
 Official logo asset
 
-abaka: https://www.abaka.ai/_next/static/media/text_logo.0_19fw7fb_ro5.svg
-Official homepage logo asset: https://www.abaka.ai/
+overfit-lab: User-supplied logo, 2026-09-29
+Original PNG used without artwork changes; scaled proportionally in the webpage.
 
 meta: https://static.xx.fbcdn.net/rsrc.php/y9/r/tL_v571NdZ0.svg
 Official logo asset

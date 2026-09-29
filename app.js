@@ -1,5 +1,17 @@
 'use strict';
 
+// Speed up the nine robot rollouts, including videos loaded on first play.
+document.querySelectorAll('#hero-robot, .policy-media video').forEach(video => {
+  video.defaultPlaybackRate = 1.5;
+  video.playbackRate = 1.5;
+  const speedLabel = document.createElement('span');
+  speedLabel.className = 'video-kind video-speed';
+  const updateSpeedLabel = () => { speedLabel.textContent = `${video.playbackRate}×`; };
+  video.addEventListener('ratechange', updateSpeedLabel);
+  updateSpeedLabel();
+  video.after(speedLabel);
+});
+
 const samples = window.TOUCHSCALE_SAMPLES;
 const grid = document.querySelector('#scene-grid');
 const dialog = document.querySelector('#scene-dialog');

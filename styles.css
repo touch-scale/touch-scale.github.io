@@ -86,6 +86,7 @@ a:hover{text-decoration:underline}
 .scene-caption h4{font-size:1em;line-height:1.5;margin:0;color:inherit}
 .sample-expand{font-size:.875em;line-height:1.5;border:0;padding:0;background:transparent;color:#787878;text-decoration:underline;text-underline-offset:.15em}
 .video-kind{position:absolute;left:.5em;top:.5em;font-size:.75em;line-height:1.5;padding:.15em .4em;color:#fff;background:#0008;pointer-events:none}
+.video-speed{left:auto;right:.5em}
 /* Results use the existing UMI columns and typeface, with emphasis on numbers. */
 .media-column.third{width:33.333333%}
 #main>#results{margin-top:1.5em;padding-top:1.5em}

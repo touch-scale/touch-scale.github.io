@@ -21,8 +21,8 @@ Official homepage SVG; black wordmark variant
 tamu: https://marcomm.tamu.edu/wp-content/themes/aux-wordpress/images/tamu-icons/TAM-maroon.svg
 Official logo asset
 
-deepmind: https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/images/0xBk-c8kzB5UTrWs/nav__gdm-lockup__light.height-25.svg
-Official logo asset
+deepmind: https://kwx34f0sv48hjozz.public.blob.vercel-storage.com/timeline/deepmind.com/eb29c02a2030168ff8045259dd2c6e9b.svg
+DeepMind logo (2019-2023 version, before the Google DeepMind rebrand), unmodified copy hosted by logo.dev: https://www.logo.dev/search/brands/deepmind.com
 
 stanford: https://identity.stanford.edu/wp-content/uploads/sites/3/2020/06/wordmark-nospace-stacked-red.png
 Official logo asset

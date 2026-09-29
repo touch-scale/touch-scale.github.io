@@ -7,7 +7,7 @@
   <meta name="description" content="TouchScale: 500 hours of human vision and touch for visual-tactile learning.">
   <title>TouchScale: 500 Hours of Human Vision and Touch for Visual–Tactile Learning</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=rollout-speed-1">
+  <link rel="stylesheet" href="styles.css?v=task-order-tamu-1">
   <link rel="stylesheet" href="chart.css?v=umi-source-2">
   <script src="samples.js?v=umi-source-2" defer></script>
   <script src="wall.js?v=wall20-clean-2" defer></script>
@@ -211,28 +211,8 @@
         </figure>
       </div>
 
-      <div class="task-group" id="compare-sorting" data-comparison="sorting">
-        <h4>(1) Soft / Hard Sorting</h4>
-        <div class="task-copy"><u><b>Task:</b></u> Identify the soft object.</div>
-        <div class="box alt policy-pair"><div class="row 50% uniform">
-          <figure class="media-column half robot-card">
-            <div class="image fit policy-media">
-              <video id="sorting-policy" data-playback-group="sorting" controls playsinline muted preload="none" poster="assets/images/sorting-policy.webp" aria-label="Soft / Hard Sorting, policy rollout with TouchScale"><source src="assets/videos/sorting-policy.mp4" type="video/mp4"></video>
-              <span class="video-kind">Policy rollout</span>
-            </div>
-            <figcaption>With TouchScale</figcaption>
-          </figure>
-          <figure class="media-column half robot-card">
-            <div class="image fit policy-media">
-              <video id="sorting-baseline" data-playback-group="sorting" controls playsinline muted preload="none" poster="assets/images/sorting-baseline.webp" aria-label="Soft / Hard Sorting, without touchscale"><source src="assets/videos/sorting-baseline.mp4" type="video/mp4"></video>
-              <span class="video-kind">Policy rollout</span>
-            </div>
-            <figcaption><strong class="without-label">Without</strong> TouchScale</figcaption>
-          </figure>
-        </div></div>
-      </div>
       <div class="task-group" id="compare-cap" data-comparison="cap">
-        <h4>(2) Bottle-Cap Removal</h4>
+        <h4>(1) Bottle-Cap Removal</h4>
         <div class="task-copy"><u><b>Task:</b></u> Remove the cap and release it into the tray.</div>
         <div class="box alt policy-pair"><div class="row 50% uniform">
           <figure class="media-column half robot-card">
@@ -252,7 +232,7 @@
         </div></div>
       </div>
       <div class="task-group" id="compare-tube" data-comparison="tube">
-        <h4>(3) Test-Tube Transfer</h4>
+        <h4>(2) Test-Tube Transfer</h4>
         <div class="task-copy"><u><b>Task:</b></u> Move the test tube to another rack slot and release it.</div>
         <div class="box alt policy-pair"><div class="row 50% uniform">
           <figure class="media-column half robot-card">
@@ -272,7 +252,7 @@
         </div></div>
       </div>
       <div class="task-group" id="compare-wipe" data-comparison="wipe">
-        <h4>(4) Whiteboard Wipe</h4>
+        <h4>(3) Whiteboard Wipe</h4>
         <div class="task-copy"><u><b>Task:</b></u> Grasp the cloth and erase the mark on the board.</div>
         <div class="box alt policy-pair"><div class="row 50% uniform">
           <figure class="media-column half robot-card">
@@ -285,6 +265,26 @@
           <figure class="media-column half robot-card">
             <div class="image fit policy-media">
               <video id="wipe-baseline" data-playback-group="wipe" controls playsinline muted preload="none" poster="assets/images/wipe-baseline.webp" aria-label="Whiteboard Wipe, without touchscale"><source src="assets/videos/wipe-baseline.mp4" type="video/mp4"></video>
+              <span class="video-kind">Policy rollout</span>
+            </div>
+            <figcaption><strong class="without-label">Without</strong> TouchScale</figcaption>
+          </figure>
+        </div></div>
+      </div>
+      <div class="task-group" id="compare-sorting" data-comparison="sorting">
+        <h4>(4) Soft / Hard Sorting</h4>
+        <div class="task-copy"><u><b>Task:</b></u> Identify the soft object.</div>
+        <div class="box alt policy-pair"><div class="row 50% uniform">
+          <figure class="media-column half robot-card">
+            <div class="image fit policy-media">
+              <video id="sorting-policy" data-playback-group="sorting" controls playsinline muted preload="none" poster="assets/images/sorting-policy.webp" aria-label="Soft / Hard Sorting, policy rollout with TouchScale"><source src="assets/videos/sorting-policy.mp4" type="video/mp4"></video>
+              <span class="video-kind">Policy rollout</span>
+            </div>
+            <figcaption>With TouchScale</figcaption>
+          </figure>
+          <figure class="media-column half robot-card">
+            <div class="image fit policy-media">
+              <video id="sorting-baseline" data-playback-group="sorting" controls playsinline muted preload="none" poster="assets/images/sorting-baseline.webp" aria-label="Soft / Hard Sorting, without touchscale"><source src="assets/videos/sorting-baseline.mp4" type="video/mp4"></video>
               <span class="video-kind">Policy rollout</span>
             </div>
             <figcaption><strong class="without-label">Without</strong> TouchScale</figcaption>

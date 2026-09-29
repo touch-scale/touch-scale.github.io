@@ -147,6 +147,7 @@ dialog::backdrop{background:#0009}
 .affiliation-logos .logo-deepmind img{width:100%}
 .affiliation-logos .logo-meta img{width:6em}
 .affiliation-logos .logo-yale img{max-height:1.85em}
+.affiliation-logos .logo-tamu{height:2.65em}
 .affiliation-logos .logo-tamu img,.affiliation-logos .logo-washington img{height:100%}
 .affiliation-logos .logo-overfit img{height:100%;width:auto}
 /* Fit Berkeley's padded artwork inside its cell; trim only the white margins. */

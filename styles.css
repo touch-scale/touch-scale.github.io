@@ -126,6 +126,7 @@ dialog::backdrop{background:#0009}
 /* Public project resources and author information, using the UMI reading column. */
 .resource-list{display:flex;justify-content:center;gap:4em;padding:.25em 0 .5em}
 .resource-item{display:flex;flex-direction:column;align-items:center;gap:.25em;min-width:5em;padding:0;border:0;background:none;color:var(--accent);opacity:1;cursor:default}
+.resource-link{text-decoration:none;cursor:pointer}
 .resource-item svg{width:2.5em;height:2.5em;margin-bottom:.25em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .resource-name{font-size:1em;line-height:1.5}
 .resource-status{font-size:.75em;line-height:1.5;color:#8a8a8a}

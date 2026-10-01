@@ -1,7 +1,7 @@
 Affiliation logo sources
 
 Logos identify the authors' affiliations. Trademarks belong to their respective owners.
-Official artwork is scaled proportionally. Sony and Amazon use dark wordmarks for a white background.
+Official artwork is scaled proportionally. Sony uses a dark wordmark for a white background.
 
 cmu: https://www.cmu.edu/
 Official homepage inline SVG
@@ -10,9 +10,6 @@ nvidia: https://www.nvidia.com/
 Official homepage inline SVG
 
 liverpool: https://www.liverpool.ac.uk/
-Official homepage inline SVG
-
-amazon: https://www.aboutamazon.com/
 Official homepage inline SVG
 
 sony: https://www.sony.net/

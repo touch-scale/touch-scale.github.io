@@ -90,8 +90,15 @@
       <div class="row 50% uniform opening-pair">
         <figure class="media-column half">
           <h4>Human vision and touch</h4>
-          <div class="image fit opening-media">
-            <video id="hero-touch" data-playback-group="opening" controls muted loop playsinline preload="metadata" poster="assets/images/hero-human-tubes.webp" aria-label="Human handling centrifuge tubes around a blue rack with synchronized measured tactile contact"><source src="assets/videos/hero-human-tubes.mp4" type="video/mp4"></video>
+          <div class="image fit opening-media opening-human-media">
+            <div class="opening-triple-video" aria-label="Human visual view with enlarged synchronized left- and right-hand touch views">
+              <canvas id="hero-touch-left" class="opening-hand-canvas" aria-label="Enlarged synchronized left-hand touch"></canvas>
+              <div class="opening-center-video">
+                <video id="hero-touch" class="opening-human-view" data-playback-group="opening" controls muted loop playsinline preload="metadata" poster="assets/images/hero-human-tubes-contact.webp" aria-label="Human handling centrifuge tubes around a blue rack"><source src="assets/videos/hero-human-tubes.mp4" type="video/mp4"></video>
+              </div>
+              <canvas id="hero-touch-right" class="opening-hand-canvas" aria-label="Enlarged synchronized right-hand touch"></canvas>
+            </div>
+            <video id="hero-touch-sensors" class="opening-sensor-source" data-playback-group="opening" muted loop playsinline preload="auto" hidden aria-hidden="true"><source src="assets/videos/human/tube-sort-tactile-highlighted.mp4" type="video/mp4"></video>
           </div>
         </figure>
         <figure class="media-column half">

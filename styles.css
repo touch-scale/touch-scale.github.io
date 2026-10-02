@@ -25,10 +25,20 @@ hr{border:0;border-bottom:solid 2px #efefef;margin:2em 0}
 #main>section:not(.opening){border-top:2px solid #efefef;margin-top:2em;padding-top:2em}
 .opening-pair h4{color:#000;font-size:1em;line-height:1.75;margin:0 0 1em}
 .opening-pair{--opening-gap:3.25em}
+.opening-pair>.media-column:first-child{width:60%}
+.opening-pair>.media-column+.media-column{width:40%}
 .opening-pair.row.uniform>.media-column:first-child{padding-right:calc((var(--opening-gap) - var(--gutter)) / 2)}
 .opening-pair.row.uniform>.media-column+.media-column{padding-left:calc((var(--opening-gap) + var(--gutter)) / 2)}
 .opening-transfer-arrow{position:absolute;top:50%;left:calc(-.5 * var(--opening-gap));transform:translate(-50%,-50%);display:block;width:2em;height:1.25em;fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 .opening-media video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#fff}
+/* The source frame contains a human view and two touch templates. Split the
+   frame into synchronized panes so the tactile templates get a dedicated,
+   slightly enlarged crop without re-encoding the video. */
+.opening-triple-video{display:grid;grid-template-columns:1.4fr 1.8fr 1.4fr;aspect-ratio:12/5;overflow:hidden;background:#fff}
+.opening-center-video{min-width:0;overflow:hidden}
+.opening-center-video .opening-human-view{display:block;width:100%;height:100%;object-fit:cover;object-position:15% center}
+.opening-hand-canvas{display:block;width:100%;height:100%;background:#fff;filter:saturate(1.28) contrast(1.06);pointer-events:none}
+.opening-sensor-source{display:none}
 .opening .opening-media{margin-bottom:0}
 .opening .project-intro{margin:1em 0 0;text-align:center;padding-right:var(--gutter)}
 /* The 50% uniform grid and media geometry used by UMI's hardware and task rows. */

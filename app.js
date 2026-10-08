@@ -4,6 +4,7 @@
 document.querySelectorAll('#hero-robot, .policy-media video').forEach(video => {
   video.defaultPlaybackRate = 1.5;
   video.playbackRate = 1.5;
+  if (video.id === 'hero-robot') return;
   const speedLabel = document.createElement('span');
   speedLabel.className = 'video-kind video-speed';
   const updateSpeedLabel = () => { speedLabel.textContent = `${video.playbackRate}×`; };

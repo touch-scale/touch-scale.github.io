@@ -47,3 +47,7 @@ Official logo asset
 
 berkeley: https://brand.berkeley.edu/wp-content/uploads/2024/08/logo-variations-thumbnail-blue-white.png
 Official logo asset
+
+2077ai: https://www.2077ai.com/2077_180.png
+Official 180x180 PNG icon, linked by https://www.2077ai.com/.
+Original artwork used without changes; scaled proportionally in the webpage.

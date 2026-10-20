@@ -1,13 +1,17 @@
 'use strict';
 
-// Speed up the nine robot rollouts, including videos loaded on first play.
-document.querySelectorAll('#hero-robot, .policy-media video').forEach(video => {
+// Speed up the opening robot rollout, including when it loads on first play.
+document.querySelectorAll('#hero-robot').forEach(video => {
   video.defaultPlaybackRate = 1.5;
   video.playbackRate = 1.5;
-  if (video.id === 'hero-robot') return;
+});
+
+// The eight comparison rollouts are encoded at 2×, so the label scales the native rate.
+const POLICY_ENCODED_SPEED = 2;
+document.querySelectorAll('.policy-media video').forEach(video => {
   const speedLabel = document.createElement('span');
   speedLabel.className = 'video-kind video-speed';
-  const updateSpeedLabel = () => { speedLabel.textContent = `${video.playbackRate}×`; };
+  const updateSpeedLabel = () => { speedLabel.textContent = `${POLICY_ENCODED_SPEED * video.playbackRate}×`; };
   video.addEventListener('ratechange', updateSpeedLabel);
   updateSpeedLabel();
   video.after(speedLabel);
@@ -27,7 +31,8 @@ function watchVideo(video) {
   video.addEventListener('play', () => {
     document.querySelectorAll('video').forEach(other => {
       const sameGroup = video.dataset.playbackGroup && video.dataset.playbackGroup === other.dataset.playbackGroup;
-      if (other !== video && !sameGroup) other.pause();
+      const bothRollouts = video.closest('.robot-card') && other.closest('.robot-card');
+      if (other !== video && !sameGroup && !bothRollouts) other.pause();
     });
   });
 }
@@ -176,10 +181,40 @@ renderChart('scenes');
 document.querySelectorAll('.robot-card video, #dialog-video').forEach(watchVideo);
 
 // Native video controls keep the task rows visually aligned with UMI.
-// The shared playback group permits either or both views to play independently.
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) document.querySelectorAll('.robot-card video').forEach(video => video.pause());
+// Comparison rollouts autoplay muted and looping once at least half on screen,
+// unless the viewer paused them there; videoObserver pauses them off screen.
+const rolloutVideos = [...document.querySelectorAll('.robot-card video')];
+const visibleRollouts = new Set();
+const pausedRollouts = new WeakSet();
+function playRollouts(videos) {
+  if (document.hidden || reduceMotion.matches || document.querySelector('dialog[open]')) return;
+  videos.forEach(video => { if (!pausedRollouts.has(video)) video.play().catch(() => {}); });
+}
+const rolloutObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    visibleRollouts.add(entry.target);
+    playRollouts([entry.target]);
+  } else {
+    visibleRollouts.delete(entry.target);
+    pausedRollouts.delete(entry.target);
+  }
+}), {threshold: .5});
+rolloutVideos.forEach(video => {
+  video.loop = true;
+  rolloutObserver.observe(video);
+  video.addEventListener('play', () => pausedRollouts.delete(video));
+  // A pause while on screen, with the tab shown and no dialog open, came from the viewer.
+  // An off-screen pause can unblock the opening pair, whose observer may have fired first.
+  video.addEventListener('pause', () => {
+    if (visibleRollouts.has(video) && !document.hidden && !document.querySelector('dialog[open]')) pausedRollouts.add(video);
+    else playOpening();
+  });
 });
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) rolloutVideos.forEach(video => video.pause());
+  else playRollouts(visibleRollouts);
+});
+document.querySelectorAll('dialog').forEach(item => item.addEventListener('close', () => playRollouts(visibleRollouts)));
 
 const figureDialog = document.querySelector('#figure-dialog');
 const figureImage = document.querySelector('#figure-image');
